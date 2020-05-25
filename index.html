@@ -18,8 +18,8 @@
     <a href="#about">Folder 3</a>
   </div>
 
-  <div class="card">
-    <h2 class="term">Apple</h2>
+  <div id="card_container">
+
   </div>
 
   <div id="root"></div>
@@ -28,16 +28,32 @@
     /*
     ADD REACT CODE HERE
     */
-    class Hello extends React.Component {
-      render() {
-        return <h1>Hello world!</h1>;
-      }
-    }
-    ReactDOM.render(
-      <Hello />,
-      document.getElementById("root")
-    );
 
+    class Card extends React.Component {
+      constructor(props) {
+        super(props);
+        this.flip = this.flip.bind(this);
+        this.state = { flipped: 0 };
+      }
+
+      flip() {
+        (this.state.flipped ? this.setState({ flipped: 0 }) : this.setState({ flipped: 1 }));
+      }
+
+
+      render() {
+        return (<div className="card">
+          <h2 onClick={this.flip} className=" term" > Side: {this.state.flipped} </h2>
+        </div>);
+      }
+
+    }
+    const element = <Card />;
+
+    ReactDOM.render(
+      element,
+      document.getElementById("card_container")
+    );
   </script>
 </body>
 
