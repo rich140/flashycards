@@ -63,3 +63,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
+node_modules
+package.json
+firebase.json
+yarn.lock
+.firebaserc
+.DS_Store
