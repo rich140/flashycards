@@ -69,5 +69,4 @@ firebase.json
 yarn.lock
 .firebaserc
 .DS_Store
-.DS_Store
-.firebaserc
+
