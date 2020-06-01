@@ -3,10 +3,13 @@ import Flashcard from './Flashcard';
 
 export default function FlashcardList({ flashcards }) {
   return (
-    <div>
-      {flashcards.map(flashcard => {
-        return <Flashcard flashcard={flashcard} key={flashcard.id} />
-      })}
-    </div>
+    // <div className="cardlist">
+    //   {flashcards.map(flashcard => {
+    //     return flashcard.term
+    //   })}
+
+    // </div>
+    <div className={'cardlist'}><p>fdsafsafsfdsfdsf</p></div>
+
   )
 }
